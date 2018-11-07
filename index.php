@@ -149,7 +149,7 @@
                                 <div id="renameBlock" class="input-group mb-3 none">
                                     <input type="text" id="newName" class="form-control" placeholder="New Name" aria-label="New Name">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-success" type="button" id="saveButton">Go</button>
+                                        <button class="btn btn-outline-success" type="button" id="saveButton">Save</button>
                                         <button class="btn btn-outline-danger" type="button" id="cancelButton">X</button>
                                     </div>
                                 </div>
