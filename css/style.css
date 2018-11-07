@@ -1,0 +1,272 @@
+.none {
+    display: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.sidebar .sidebar-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid black;
+    padding: 20px 0 20px 10px;
+}
+
+.sidebar .sidebar-header .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar .sidebar-header a {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar .sidebar-header a:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.sidebar .sidebar-body {
+    position: relative;
+    padding: 20px 5px;
+}
+
+.sidebar .sidebar-body .link {
+    color: #acacac;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sidebar .sidebar-body .link:hover {
+    color: #9a9a9a;
+}
+
+.sidebar .sidebar-body .text {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.col-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.service-container {
+    position: relative;
+}
+
+#openServices {
+    cursor: pointer;
+}
+
+.service-container.opened .service {
+    animation: showUp 0.4s forwards;
+}
+
+.service-container.opened .guinea-pig img {
+    animation: clicked 1s forwards;
+}
+
+.service {
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 3px solid white;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.service i {
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+.greeting-service {
+    top: -100px;
+    left: calc(50% - 40px);
+    animation-delay: 0ms !important;
+    background-color: darkgreen;
+}
+
+.joke-service {
+    top: 50px;
+    right: -150px;
+    animation-delay: 150ms !important;
+    background-color: darkred;
+}
+
+.word-service {
+    bottom: 50px;
+    right: -150px;
+    animation-delay: 300ms !important;
+    background-color: darkblue;
+}
+
+.todo-service {
+    bottom: -100px;
+    left: calc(50% - 40px);
+    animation-delay: 450ms !important;
+    background-color: lightblue;
+}
+
+.calculate-service {
+    bottom: 50px;
+    left: -150px;
+    animation-delay: 600ms !important;
+    background-color: lightgreen;
+}
+
+.news-service {
+    top: 50px;
+    left: -150px;
+    animation-delay: 750ms !important;
+    background-color: lightcoral;
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes clicked {
+    0% {
+        transform: rotateZ(0);
+    }
+    15% {
+        transform: rotateZ(20deg);
+    }
+    30% {
+        transform: rotateZ(-14deg);
+    }
+    45% {
+        transform: rotateZ(9deg);
+    }
+    60% {
+        transform: rotateZ(-4deg);
+    }
+    70% {
+        transform: rotateZ(1deg)
+    }
+    100% {
+        transform: rotateZ(0);
+    }
+}
+
+.calculate-btn {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.calculate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calculate input[type="number"] {
+    width: 60px;
+    border-radius: 8px;
+    padding: 5px 0;
+    text-align: right;
+}
+
+.radio-group-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.radio-group-container .radio-group {
+    position: relative;
+}
+
+
+.radio-group-container .radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group-container .radio-group input[type="radio"] + label {
+    padding: 5px 12px;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid white;
+    border-right: none;
+}
+
+.radio-group-container .radio-group:first-child input[type="radio"] + label {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.radio-group-container .radio-group:last-child input[type="radio"] + label {
+    border-right: 1px solid white;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.radio-group-container .radio-group input[type="radio"]:checked + label {
+    background-color: white;
+    color: #575757;
+    display: block;
+}
+
+.loading:after {
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 60px);
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid goldenrod;
+    border-color: goldenrod transparent goldenrod transparent;
+    animation: spinning 0.8s infinite;
+    content: " ";
+    margin: 1px;
+    animation: spinning 1.2s linear infinite;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotateZ(0);
+    }
+    60% {
+        transform: rotateZ(250deg);
+    }
+    80% {
+        transform: rotateZ(290deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
