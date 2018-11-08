@@ -6,7 +6,7 @@ function init() {
 
     setInterval(() => {
         getName();
-    }, 10000);
+    }, 5000);
 }
 
 init();
